@@ -10,19 +10,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        ctrldown {
-            bindings = <&kp LC(K)>;
-            key-positions = <12 24 20>;
-        };
-
-        paste {
-            bindings = <&kp K_PASTE>;
-            key-positions = <36 28>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         holdtolayer: holdtolayer {
@@ -33,21 +21,14 @@
             #binding-cells = <2>;
             tapping-term-ms = <400>;
         };
-    };
 
-    macros {
-        ctrldown: ctrldown {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp M &kp K>,
-                <&macro_release>,
-                <&kp LSHFT>;
+        holdortap: holdortap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDORTAP";
+            bindings = <&kp>, <&kp>;
 
-            label = "CTRLDOWN";
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
         };
     };
 
@@ -62,10 +43,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R             &kp T               &kp Y             &kp U  &kp I             &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F             &kp G               &kp H             &kp J  &kp K             &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &holdtolayer 4 V  &holdtolayer 3 B    &holdtolayer 5 N  &kp M  &kp COMMA         &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1             &kp SPACE           &kp RET           &mo 2  &kp LEFT_COMMAND
+&kp TAB    &kp Q  &kp W  &kp E     &kp R             &kp T               &kp Y                  &kp U                      &kp I                      &kp O                   &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F             &kp G               &holdortap LC(LEFT) H  &holdortap LC(UP_ARROW) J  &holdortap LC(UP_ARROW) K  &holdortap LC(RIGHT) J  &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &holdtolayer 4 V  &holdtolayer 3 B    &holdtolayer 5 N       &kp M                      &kp COMMA                  &kp DOT                 &kp FSLH  &kp ESC
+                         &kp LGUI  &mo 1             &kp SPACE           &kp RET                &mo 2                      &kp LEFT_COMMAND
             >;
         };
 
@@ -89,19 +70,19 @@
 
         navlayer {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans    &kp K_REDO    &kp K_PASTE  &kp K_COPY     &kp K_CUT    &kp K_UNDO  &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp CAPSLOCK  &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT   &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &kp INSERT    &kp HOME     &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &trans
-                            &trans     &trans     &trans    &kp RET       &kp BSPC     &kp DEL
+&trans  &trans    &trans    &trans     &trans     &trans    &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)      &kp LG(X)    &kp LG(Z)  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp CAPSLOCK   &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &kp INSERT     &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
+                            &trans     &trans     &trans    &kp RET        &kp BSPC   &kp DEL
             >;
         };
 
         funlayer {
             bindings = <
-&trans       &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&bt BT_CLR   &kp F11  &kp F4  &kp F5  &kp F6  &trans             &trans        &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI      &trans
-&bootloader  &kp F10  &kp F1  &kp F2  &kp F3  &trans             &bootloader   &trans        &trans        &trans        &trans        &trans
-                              &trans  &trans  &kp TAB            &trans        &trans        &trans
+&trans       &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LS(NUMBER_4))    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&bt BT_CLR   &kp F11  &kp F4  &kp F5  &kp F6  &kp LG(LS(NUMBER_3))    &trans        &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI      &trans
+&bootloader  &kp F10  &kp F1  &kp F2  &kp F3  &trans                  &bootloader   &trans        &trans        &trans        &trans        &trans
+                              &trans  &trans  &kp TAB                 &trans        &trans        &trans
             >;
         };
 
