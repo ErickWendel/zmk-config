@@ -10,7 +10,19 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        ctrldown {
+            bindings = <&kp LC(K)>;
+            key-positions = <12 24 20>;
+        };
+
+        paste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <36 28>;
+        };
+    };
 
     behaviors {
         holdtolayer: holdtolayer {
@@ -25,13 +37,16 @@
 
     macros {
         ctrldown: ctrldown {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&macro_release &kp LSHFT>
-                ;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp M &kp K>,
+                <&macro_release>,
+                <&kp LSHFT>;
+
             label = "CTRLDOWN";
         };
     };
