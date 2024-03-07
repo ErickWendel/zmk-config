@@ -71,6 +71,14 @@
 
             label = "PRINT";
         };
+
+        ctrldown: ctrldown {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(K)>, <&macro_press>, <&kp LC(DOWN)>;
+
+            label = "CTRLDOWN";
+        };
     };
 
     keymap {
