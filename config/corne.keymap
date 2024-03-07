@@ -34,10 +34,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E             &kp R             &kp T               &kp Y    &kp U  &kp I             &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D             &kp F             &kp G               &kp H    &kp J  &kp K             &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &holdtolayer 5 C  &holdtolayer 4 V  &holdtolayer 3 B    &kp N    &kp M  &kp COMMA         &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI          &mo 1             &kp SPACE           &kp RET  &mo 2  &kp LEFT_COMMAND
+&kp TAB    &kp Q  &kp W  &kp E     &kp R             &kp T               &kp Y             &kp U  &kp I             &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F             &kp G               &kp H             &kp J  &kp K             &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &holdtolayer 4 V  &holdtolayer 3 B    &holdtolayer 5 N  &kp M  &kp COMMA         &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &mo 1             &kp SPACE           &kp RET           &mo 2  &kp LEFT_COMMAND
             >;
         };
 
@@ -74,15 +74,6 @@
 &bt BT_CLR   &kp F11  &kp F4  &kp F5  &kp F6  &trans             &trans        &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI      &trans
 &bootloader  &kp F10  &kp F1  &kp F2  &kp F3  &trans             &bootloader   &trans        &trans        &trans        &trans        &trans
                               &trans  &trans  &kp TAB            &trans        &trans        &trans
-            >;
-        };
-
-        btnlayer {
-            bindings = <
-&trans  &kp K_UNDO        &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO  &trans
-&trans  &kp LEFT_COMMAND  &kp LALT   &kp LCTRL   &kp LSHFT    &trans        &trans      &kp LSHFT    &kp LCTRL   &kp LALT   &kp LGUI    &trans
-&trans  &kp K_UNDO        &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_REDO    &kp K_REDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO  &trans
-                                     &mkp MCLK   &mkp LCLK    &mkp RCLK     &mkp RCLK   &mkp LCLK    &mkp MCLK
             >;
         };
 
