@@ -27,7 +27,7 @@
         copy: copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp K_COPY>, <&macro_press>, <&kp LG(C)>;
+            bindings = <&kp K_COPY>, <&macro_tap>, <&kp LG(C)>;
 
             label = "COPY";
         };
@@ -35,7 +35,7 @@
         paste: paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp K_PASTE>, <&macro_press>, <&kp LG(V)>;
+            bindings = <&kp K_PASTE>, <&macro_tap>, <&kp LG(V)>;
 
             label = "PASTE";
         };
