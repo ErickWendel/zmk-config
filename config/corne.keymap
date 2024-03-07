@@ -105,7 +105,7 @@
 &trans  &kp LS(LBRC)   &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)     &trans  &trans     &trans     &trans    &trans    &trans
 &trans  &kp LS(COLON)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp CARET      &kp LS(PLUS)     &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
 &trans  &kp TILDE      &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(PIPE)     &trans  &trans     &trans     &trans    &trans    &trans
-                                     &kp LS(LPAR)   &kp LS(RPAR)   &kp LS(UNDER)    &trans  &trans     &trans
+                                     &kp LS(LPAR)   &kp MINUS      &kp LS(MINUS)    &trans  &trans     &trans
             >;
         };
 
