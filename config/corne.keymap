@@ -23,6 +23,59 @@
         };
     };
 
+    macros {
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_COPY>, <&macro_press>, <&kp LG(C)>;
+
+            label = "COPY";
+        };
+
+        paste: paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_PASTE>, <&macro_press>, <&kp LG(V)>;
+
+            label = "PASTE";
+        };
+
+        undo: undo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_UNDO>, <&macro_press>, <&kp LG(Z)>;
+
+            label = "UNDO";
+        };
+
+        redo: redo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_REDO>, <&macro_press>, <&kp LG(LS(Z))>;
+
+            label = "REDO";
+        };
+
+        cut: cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K_CUT>, <&macro_press>, <&kp LG(X)>;
+
+            label = "CUT";
+        };
+
+        printSelect: print {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp PRINTSCREEN>,
+                <&macro_press>,
+                <&kp LG(LS(NUMBER_4))>;
+
+            label = "PRINT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -64,7 +117,7 @@
 &trans  &trans    &trans    &trans     &trans     &trans    &kp K_REDO    &kp K_PASTE  &kp K_COPY     &kp K_CUT    &kp K_UNDO  &trans
 &trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp CAPSLOCK  &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT   &trans
 &trans  &trans    &trans    &trans     &trans     &trans    &kp INSERT    &kp HOME     &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &trans
-                            &trans     &to 0      &to 0     &kp RET       &kp BSPC     &kp DEL
+                            &trans     &trans     &trans    &kp RET       &kp BSPC     &kp DEL
             >;
         };
 
