@@ -43,7 +43,7 @@
         undo: undo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp K_UNDO>, <&macro_press>, <&kp LG(Z)>;
+            bindings = <&kp K_UNDO>, <&macro_tap>, <&kp LG(Z)>;
 
             label = "UNDO";
         };
@@ -51,7 +51,7 @@
         redo: redo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp K_REDO>, <&macro_press>, <&kp LG(LS(Z))>;
+            bindings = <&kp K_REDO>, <&macro_tap>, <&kp LG(LS(Z))>;
 
             label = "REDO";
         };
@@ -59,7 +59,7 @@
         cut: cut {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp K_CUT>, <&macro_press>, <&kp LG(X)>;
+            bindings = <&kp K_CUT>, <&macro_tap>, <&kp LG(X)>;
 
             label = "CUT";
         };
@@ -67,10 +67,7 @@
         printSelect: print {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp PRINTSCREEN>,
-                <&macro_press>,
-                <&kp LG(LS(NUMBER_4))>;
+            bindings = <&kp PRINTSCREEN>, <&macro_tap>, <&kp LG(LS(NUMBER_4))>;
 
             label = "PRINT";
         };
