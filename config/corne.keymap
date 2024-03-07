@@ -75,8 +75,11 @@
         ctrldown: ctrldown {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(K)>, <&macro_tap>, <&kp LC(DOWN)>;
-
+            bindings
+                = <&macro_press &kp LCTRL &kp LC(K)>
+                , <&macro_tap &kp LCTRL &kp LC(DOWN)>
+                , <&macro_release &kp LCTRL>
+                ;
             label = "CTRLDOWN";
         };
     };
