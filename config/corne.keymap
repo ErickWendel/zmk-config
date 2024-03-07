@@ -24,54 +24,6 @@
     };
 
     macros {
-        copy: copy {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_COPY>, <&macro_tap>, <&kp LG(C)>;
-
-            label = "COPY";
-        };
-
-        paste: paste {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_PASTE>, <&macro_tap>, <&kp LG(V)>;
-
-            label = "PASTE";
-        };
-
-        undo: undo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_UNDO>, <&macro_tap>, <&kp LG(Z)>;
-
-            label = "UNDO";
-        };
-
-        redo: redo {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_REDO>, <&macro_tap>, <&kp LG(LS(Z))>;
-
-            label = "REDO";
-        };
-
-        cut: cut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp K_CUT>, <&macro_tap>, <&kp LG(X)>;
-
-            label = "CUT";
-        };
-
-        printSelect: print {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp PRINTSCREEN>, <&macro_tap>, <&kp LG(LS(NUMBER_4))>;
-
-            label = "PRINT";
-        };
-
         ctrldown: ctrldown {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
