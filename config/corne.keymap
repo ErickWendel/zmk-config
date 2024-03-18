@@ -43,10 +43,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R             &kp T        &holdortap LC(GRAVE) Y  &kp U                  &kp I                  &kp O                      &kp P                           &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F             &kp G        &kp H                   &holdortap LC(LEFT) J  &holdortap LC(DOWN) K  &holdortap LC(UP_ARROW) L  &holdortap LC(RIGHT) SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &holdtolayer 4 V  &kp B        &kp N                   &kp M                  &kp COMMA              &kp DOT                    &kp FSLH                        &kp ESC
-                         &kp LGUI  &mo 3             &kp SPACE    &kp RET                 &mo 1                  &mo 2
+&kp TAB    &kp Q  &kp W  &kp E     &kp R             &kp T        &holdortap LC(GRAVE) Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F             &kp G        &kp H                   &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &holdtolayer 4 V  &kp B        &kp N                   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &mo 3             &kp SPACE    &kp RET                 &mo 1  &mo 2
             >;
         };
 
