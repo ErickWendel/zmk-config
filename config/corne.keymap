@@ -19,7 +19,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <600>;
         };
 
         holdortap: holdortap {
@@ -28,7 +28,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <600>;
         };
     };
 
@@ -43,10 +43,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R             &kp T        &holdortap LC(GRAVE) Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F             &kp G        &kp H                   &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &holdtolayer 4 V  &kp B        &kp N                   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 3             &kp SPACE    &kp RET                 &mo 1  &mo 2
+&kp TAB    &kp Q  &kp W  &kp E     &kp R             &kp T                   &holdortap LC(GRAVE) Y  &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F             &kp G                   &kp H                   &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &holdtolayer 4 V  &kp B                   &kp N                   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &mo 3             &holdtolayer 0 SPACE    &kp RET                 &mo 1  &mo 2
             >;
         };
 
@@ -70,10 +70,10 @@
 
         navlayer {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans    &kp LS(LG(Z))  &kp LG(V)      &kp LG(C)      &kp LG(X)    &kp LG(Z)  &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &kp CAPSLOCK   &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &kp INSERT     &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
-                            &trans     &trans     &trans    &trans         &kp BACKSPACE  &kp DEL
+&trans  &trans    &trans    &trans              &trans         &trans    &kp LS(LG(Z))  &kp LG(V)      &kp LG(C)      &kp LG(X)    &kp LG(Z)  &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL           &kp LSHFT      &trans    &kp CAPSLOCK   &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
+&trans  &trans    &trans    &kp LA(LG(ESCAPE))  &kp LG(SPACE)  &trans    &kp INSERT     &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
+                            &trans              &trans         &trans    &trans         &kp BACKSPACE  &kp DEL
             >;
         };
 
@@ -83,6 +83,15 @@
 &bt BT_CLR   &kp F11  &kp F4  &kp F5  &kp F6  &kp LG(LS(NUMBER_3))    &trans        &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI      &trans
 &bootloader  &kp F10  &kp F1  &kp F2  &kp F3  &trans                  &bootloader   &trans        &trans        &trans        &trans        &trans
                               &trans  &trans  &kp TAB                 &trans        &trans        &trans
+            >;
+        };
+
+        mediaLayer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp K_COFFEE  &kp K_PLAY_PAUSE   &trans           &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp K_PREV    &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans             &trans           &trans      &trans
+                        &trans  &trans  &trans    &trans  &trans        &trans
             >;
         };
     };
