@@ -84,19 +84,19 @@
 
         navlayer {
             bindings = <
-&trans  &kp LC(LS(TAB))  &trans    &trans              &kp LC(TAB)    &trans    &kp LS(LG(Z))  &kp LG(V)      &kp LG(C)      &kp LG(X)    &kp LG(Z)  &trans
-&trans  &kp LGUI         &kp LALT  &kp LCTRL           &kp LSHFT      &trans    &kp CAPSLOCK   &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
-&trans  &trans           &trans    &kp LA(LG(ESCAPE))  &kp LG(SPACE)  &trans    &kp INSERT     &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
-                                   &trans              &trans         &trans    &trans         &kp BACKSPACE  &kp DEL
+&trans  &kp LS(LG(GRAVE))  &kp LC(LS(TAB))  &kp LC(TAB)         &kp LG(GRAVE)  &trans    &kp LS(LG(Z))  &kp LG(V)      &kp LG(C)      &kp LG(X)    &kp LG(Z)  &trans
+&trans  &kp LGUI           &kp LALT         &kp LCTRL           &kp LSHFT      &trans    &kp CAPSLOCK   &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT  &trans
+&trans  &trans             &trans           &kp LA(LG(ESCAPE))  &kp LG(SPACE)  &trans    &kp INSERT     &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &trans
+                                            &trans              &trans         &trans    &trans         &kp BACKSPACE  &kp DEL
             >;
         };
 
         funlayer {
             bindings = <
-&trans       &kp F12  &kp F7  &kp F8  &kp F9  &kp LG(LS(NUMBER_4))    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&bt BT_CLR   &kp F11  &kp F4  &kp F5  &kp F6  &kp LG(LS(NUMBER_3))    &trans        &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI      &trans
-&bootloader  &kp F10  &kp F1  &kp F2  &kp F3  &trans                  &bootloader   &trans        &trans        &trans        &trans        &trans
-                              &trans  &trans  &kp TAB                 &trans        &trans        &trans
+&trans       &kp F12  &kp F7  &kp F8  &kp F9         &kp LG(LS(NUMBER_4))    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&bt BT_CLR   &kp F11  &kp F4  &kp F5  &kp F6         &kp LG(LS(NUMBER_3))    &trans        &kp LSHFT     &kp LCTRL     &kp LALT      &kp LGUI      &trans
+&bootloader  &kp F10  &kp F1  &kp F2  &kp F3         &trans                  &bootloader   &trans        &trans        &trans        &trans        &trans
+                              &trans  &kp LG(LC(Q))  &kp TAB                 &trans        &trans        &trans
             >;
         };
     };
