@@ -46,6 +46,15 @@
         };
     };
 
+    macros {
+        exitterm: exitterm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp X &kp I &kp T &kp RET>;
+            label = "EXITTERM";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -68,7 +77,7 @@
             bindings = <
 &trans  &kp LBKT      &kp N7  &kp N8   &kp N9  &kp RBKT     &kp K_MUTE  &kp LG(MINUS)  &kp C_VOL_DN       &kp C_VOLUME_UP  &kp LG(EQUAL)  &trans
 &trans  &kp PLUS      &kp N4  &kp N5   &kp N6  &kp EQUAL    &trans      &kp LSHFT      &kp LCTRL          &kp LALT         &kp LGUI       &trans
-&trans  &kp ASTERISK  &kp N1  &kp N2   &kp N3  &kp BSLH     &kp LC(C)   &kp LC(L)      &kp LG(BACKSLASH)  &trans           &trans         &trans
+&trans  &kp ASTERISK  &kp N1  &kp N2   &kp N3  &kp BSLH     &kp LC(C)   &kp LC(L)      &kp LG(BACKSLASH)  &exitterm        &trans         &trans
                               &kp DOT  &kp N0  &kp MINUS    &trans      &trans         &trans
             >;
         };
