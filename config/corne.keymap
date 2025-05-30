@@ -100,12 +100,12 @@
         };
 
         next-song {
-            bindings = <&kp K_NEXT>;
+            bindings = <&kp C_NEXT>;
             key-positions = <31 32>;
         };
 
         prev-song {
-            bindings = <&kp C_NEXT>;
+            bindings = <&kp C_PREV>;
             key-positions = <7 8>;
         };
 
