@@ -93,6 +93,11 @@
             bindings = <&kp LG(V)>;
             key-positions = <28 29>;
         };
+
+        select-all {
+            bindings = <&kp LG(A)>;
+            key-positions = <5 4>;
+        };
     };
 
     behaviors {
