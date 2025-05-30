@@ -98,6 +98,26 @@
             bindings = <&kp LG(A)>;
             key-positions = <5 4>;
         };
+
+        next-song {
+            bindings = <&kp K_NEXT>;
+            key-positions = <31 32>;
+        };
+
+        prev-song {
+            bindings = <&kp C_NEXT>;
+            key-positions = <7 8>;
+        };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <6 7>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <4 3>;
+        };
     };
 
     behaviors {
